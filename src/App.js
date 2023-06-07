@@ -119,7 +119,7 @@ const App = () => {
           },
           {
             title: currentTitle,
-            role: "Carla",
+            role: "Assistant",
             content: message.content
           }
         ]
@@ -174,7 +174,7 @@ const App = () => {
         <ul className="feed" ref={chatDisplayRef}>
           <li><p class="role">Carla:</p><p>Welcome to Carpet One Stafford! How can I help you today?</p></li>
           {currentChat.map((chatMessage, index) => <li key={index}>
-            <p className="role">{chatMessage.role}:</p>
+            <p className="role">{(chatMessage.role === "Assistant")?'Carla':chatMessage.role}:</p>
             {/* <p>{chatMessage.content}</p> */}
             
             {/* <ChatMessage message={chatMessage.content} /> */}
