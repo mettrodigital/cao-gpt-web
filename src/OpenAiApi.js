@@ -19,7 +19,7 @@ axiosThrottle.use(axios, { requestsPerSecond: 5 });
 const api = axios.create({
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
       "Access-Control-Allow-Origin": "*",
     },
     baseURL: "https://api.openai.com/v1",
