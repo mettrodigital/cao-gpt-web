@@ -20,6 +20,7 @@ const api = axios.create({
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
+      "OpenAI-Organization": "org-FXtNEfkfo7OZtqpQ0pmOdBDQ",
       "Access-Control-Allow-Origin": "*",
     },
     baseURL: "https://api.openai.com/v1",
@@ -32,7 +33,7 @@ export const GPT3 = {
     textEngine: "text-davinci-003",
     chatEngine: "gpt-3.5-turbo",
     maxTokens: 2048,
-    temperature: 0.7,
+    temperature: 1,
     presencePenalty: 0.6,
     frequencyPenalty: 0,
     topP: 1,
@@ -51,7 +52,6 @@ export const GPT3 = {
       //   model: response.data.model,
       //   tokens: tokens,
       // });
-      console.log(response.data.model);
     },
     generateText: async (
       prompt,
@@ -95,10 +95,10 @@ export const GPT3 = {
       let params = {
         model: GPT3.chatEngine,
         messages: messages,
-        temperature: temp,
-        max_tokens: maxLength,
+        // temperature: temp,
+        // max_tokens: maxLength,
       };
-  
+      console.log(messages);
       const response = await api.post("/chat/completions", params);
   
       GPT3.logTokens(response);

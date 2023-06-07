@@ -104,6 +104,8 @@ const App = () => {
   }
 
   useEffect(() => {
+    
+    inputRef.current.focus();
     console.log(currentTitle, value, message)
     
     if (!currentTitle && value && message){
