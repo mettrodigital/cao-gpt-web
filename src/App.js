@@ -4,7 +4,7 @@ import { GPT3 } from './OpenAiApi.js';
 
 
 function replaceProductInfoWithImages(text) {
-  const productNameRegex = /Products Name: (.+)/g;
+  //const productNameRegex = /Products Name: (.+)/g;
   const productImageRegex = /Product Image: (.+)/g;
 
   let replacedText = text;
@@ -48,10 +48,6 @@ const App = () => {
   }
 
   const getMessages = async () => {
-    // let site_url = "https://cao-web-api.onrender.com"
-    // if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === ""){
-    //   site_url = "http://localhost:8000"
-    // }
     if (inputRef.current.value.trim() === '') {
       return; // Prevent submission if input is empty or contains only whitespace
     }
@@ -60,16 +56,16 @@ const App = () => {
 
     setIsSent(1)
     inputRef.current.value = "";
-    const options = {
-      method: "POST",
-      body: JSON.stringify({
-        message: value,
-        previousChats: previousChats,
-      }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }
+    // const options = {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     message: value,
+    //     previousChats: previousChats,
+    //   }),
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   }
+    // }
     try{
 
 
@@ -186,8 +182,8 @@ const App = () => {
            </li>)}
 
             
-            {isSent == 1 && (<li><p className="role">User:</p><p>{value}</p></li>)}
-            {isSent == 1 && (<li className='assistant-wrapper'><p className="role">Assistant:</p><p className='loading-wrapper'><img className="typing-image" src={typingImageUrl} /></p></li>)}
+            {isSent === 1 && (<li><p className="role">User:</p><p>{value}</p></li>)}
+            {isSent === 1 && (<li className='assistant-wrapper'><p className="role">Assistant:</p><p className='loading-wrapper'><img className="typing-image" src={typingImageUrl} /></p></li>)}
             
         </ul>
         <div className="bottom-section">
