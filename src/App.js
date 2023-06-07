@@ -119,7 +119,7 @@ const App = () => {
           },
           {
             title: currentTitle,
-            role: "Assistant",
+            role: "Carla",
             content: message.content
           }
         ]
@@ -172,7 +172,7 @@ const App = () => {
       <section className="main">
         {/* {!currentTitle && <h3>Welcome to Carpet One Stafford! How can I help you today?</h3>} */}
         <ul className="feed" ref={chatDisplayRef}>
-          <li><p class="role">Assistant:</p><p>Welcome to Carpet One Stafford! How can I help you today?</p></li>
+          <li><p class="role">Carla:</p><p>Welcome to Carpet One Stafford! How can I help you today?</p></li>
           {currentChat.map((chatMessage, index) => <li key={index}>
             <p className="role">{chatMessage.role}:</p>
             {/* <p>{chatMessage.content}</p> */}
@@ -183,7 +183,7 @@ const App = () => {
 
             
             {isSent === 1 && (<li><p className="role">User:</p><p>{value}</p></li>)}
-            {isSent === 1 && (<li className='assistant-wrapper'><p className="role">Assistant:</p><p className='loading-wrapper'><img className="typing-image" src={typingImageUrl} /></p></li>)}
+            {isSent === 1 && (<li className='assistant-wrapper'><p className="role">Carla:</p><p className='loading-wrapper'><img className="typing-image" src={typingImageUrl} /></p></li>)}
             
         </ul>
         <div className="bottom-section">
