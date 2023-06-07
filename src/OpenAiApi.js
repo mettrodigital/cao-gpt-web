@@ -72,7 +72,7 @@ export const GPT3 = {
   
       const response = await api.post("/completions", params);
   
-      GPT3.logTokens(response);
+      //GPT3.logTokens(response);
   
       return response.data;
     },
@@ -101,7 +101,7 @@ export const GPT3 = {
       console.log(messages);
       const response = await api.post("/chat/completions", params);
   
-      GPT3.logTokens(response);
+      //GPT3.logTokens(response);
   
       return response.data;
     },

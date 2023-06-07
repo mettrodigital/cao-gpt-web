@@ -70,7 +70,7 @@ const App = () => {
 
 
       const messages =  [
-        { role: "user", content: `Training data own dataset into training json form AI: Welcome to Carpet One Stafford, Australia! How can I help you today?
+        { role: "user", content: `Training data own dataset into training json form AI: Welcome to Carpet One Stafford website in Australia! Phone number is 07 3856 6550. Located at 1/482 Stafford Road, Stafford QLD 4053 and site url https://www.carpetone.com.au/stafford/ .  How can I help you today?
         Human: Do you have charming rainstorm?
         AI: I’m not sure I know that product, I might need some more information from you. Can you tell me more about what you’re looking for? For example, is it a Nylon Carpet or Vinyl Plank?
         Human: Vinyl Plank
@@ -89,8 +89,6 @@ const App = () => {
     
       const response = await GPT3.generateChat(messages);
       
-      console.log(response.choices[0].message.content);
-
 
       //const response = await fetch( site_url + '/completions', options)
       
@@ -163,13 +161,14 @@ const App = () => {
   return (
     <div className="app">
       <section className="side-bar">
-          <button onClick={createNewChat}>+ New chat</button>
+          {/* <button onClick={createNewChat}>+ New chat</button> */}
+          <h3>Carpet One Stafford</h3>
           <ul className="history">
             {uniqueTitles?.map((uniqueTitle, index) => <li key={index} onClick={() => handleClick(uniqueTitle)}>{uniqueTitle}</li>)}
           </ul>
-          <nav>
+          {/* <nav>
             Products
-          </nav>
+          </nav> */}
       </section>
       <section className="main">
         {/* {!currentTitle && <h3>Welcome to Carpet One Stafford! How can I help you today?</h3>} */}
@@ -189,6 +188,7 @@ const App = () => {
             
         </ul>
         <div className="bottom-section">
+        <hr />
           <div className="input-container">
 
               <input disabled={isSubmitted} ref={inputRef}  onChange={(e) => setValue(e.target.value)} onKeyDown={(e) => (e.key == 'Enter')?getMessages():""} />

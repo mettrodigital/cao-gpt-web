@@ -11,13 +11,13 @@ body{
 }
 
 .app{
-  background-color: #343541;
+  background-color: #ffffff;
   display: flex;
 
 }
 
 .side-bar{
-  background-color: #202123;
+  background-color: #19A7B3;
   height: 100vh;
   width: 244px;
   display: flex;
@@ -55,6 +55,13 @@ button{
   align-items: center;
 }
 
+hr{
+  border: 0 none;
+    border-bottom: 1px solid #cccccc2e;
+    width: 95%;
+    margin-top: 20px;
+}
+
 .info{
   color: rgba(255,255,255, 0.5);
   font-size: 14px;
@@ -75,14 +82,18 @@ button{
   position: relative;
   width: 100%;
   max-width: 650px;
+  margin-top: 30px;
 }
 
 input{
   width: 100%;
   border: none;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
   padding: 12px 15px;
   border-radius: 5px;
+  color: #2e323e;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 input:focus{
@@ -91,11 +102,17 @@ input:focus{
 
 #submit{
   position: absolute;
-  bottom: 15px;
-  right: 0;
+  bottom: 0px;
+  right: -28px;
   cursor: pointer;
+  padding: 10px;
+  color: #2e323e;
+  font-weight: 500;
 }
 
+#submit:hover{
+  opacity: 0.8;
+}
 .feed{
   overflow-y: auto;
   width: 95%;
@@ -104,21 +121,25 @@ input:focus{
 
 .feed li{
   display: flex;
-  background-color: #444654;
-  width: 95%;
+  background-color: #F5F5F5;
   padding: 20px;
   margin: 20px 0;
 }
 
 .feed p, .feed pre{
-  color: rgba(255,255,255, 0.8);
+  color: #2e323e;
   font-size: 14px;
   text-align: left;
   text-wrap: wrap;
+  font-weight: 500;
 }
 
 .feed p.role{
   min-width: 100px;
+}
+
+h3{
+  text-align: center;
 }
 
 .typing-image{
