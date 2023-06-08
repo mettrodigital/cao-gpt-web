@@ -70,7 +70,8 @@ const App = () => {
 
 
       const messages =  [
-        { role: "user", content: `Answer the question as truthfully as possible, and if you're unsure of the answer, say "Sorry, I don't know". Training data own dataset into training json form AI: Welcome to Carpet One Stafford website in Australia! Phone number is 07 3856 6550. Located at 1/482 Stafford Road, Stafford QLD 4053 and site url https://www.carpetone.com.au/stafford/ .  How can I help you today?
+        { role: "user", content: `Answer the question as truthfully as possible, and if you're unsure of the answer, say "Sorry, I don't know". Vinyl plank flooring has surged in popularity over recent years as a more affordable alternative to timber flooring. Vinyl plank is not only beautifully soft underfoot but also ultra-low maintenance, making it a perfect family and pet-friendly floor. Vinyl plank has many qualities that make it the first choice in its own right for a growing number of homeowners, landlords & commercial operators.
+        At Carpet One, we have a vast range of vinyl plank styles in a variety of timber, concrete and contemporary designs that will suit any lifestyle, design preference and budget.  Training data own dataset into training json form AI: Welcome to Carpet One Stafford website in Australia! Phone number is 07 3856 6550. Located at 1/482 Stafford Road, Stafford QLD 4053 and site url https://www.carpetone.com.au/stafford/ .  How can I help you today?
         Human: Do you have charming rainstorm?
         AI: I’m not sure I know that product, I might need some more information from you. Can you tell me more about what you’re looking for? For example, is it a Nylon Carpet or Vinyl Plank?
         Human: Do you have Vinyl Plank
