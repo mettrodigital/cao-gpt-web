@@ -126,6 +126,14 @@ input:focus{
   margin: 20px 0;
 }
 
+.feed li a{
+  color: #2e323e;
+}
+
+.feed a:hover{  
+  color: #19a7b3;
+}
+
 .feed p, .feed pre{
   color: #2e323e;
   font-size: 14px;
