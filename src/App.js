@@ -78,7 +78,7 @@ const App = () => {
         Human: Do you have Nylon Carpet
         AI: Gotcha. I’m sorry, we don’t carry that particular product. But I have some great products that are very similar and are high quality. They are also priced very competitively as part of our cooperative buying power. \n\n Here are some excellent Nylon Carpet options I would recommend. \n\n <a href="https://www.carpetone.com.au/stafford/product/dream-shadows-vapar/" target="_blank">Dream Shadows – Vapar</a> \n Product Image: https://www.carpetone.com.au/stafford/wp-content/uploads/2021/02/dream_shadows_vapar.jpg \n\n <a href="https://www.carpetone.com.au/stafford/product/dream-shadows-buffalo/" target="_blank">Dream Shadows – Buffalo</a> \n Product Image: https://www.carpetone.com.au/stafford/wp-content/uploads/2021/02/dream_shadows_buffalo_0.jpg \n\n Would you like to see our full nylon carpet range? Or I can see Mary from Carpet One Stafford is online at the moment, would you like me to start a call with her?
         Human:I would like to see your full vinyl plank range, please. \nAI:` },
-        { role: "assistant", content: "I would like to see your full vinyl plank range, please.\n At Carpet One, we have a vast range of vinyl plank styles in a variety of timber, concrete and contemporary designs that will suit any lifestyle, design preference and budget. " }
+        { role: "assistant", content: "Human: I would like to see your full vinyl plank range, please.\n AI: At Carpet One, we have a vast range of vinyl plank styles in a variety of timber, concrete and contemporary designs that will suit any lifestyle, design preference and budget. " }
     ]
     if(previousChats){
         for (const chat of previousChats) {
