@@ -175,7 +175,7 @@ const App = () => {
         <ul className="feed" ref={chatDisplayRef}>
           <li><p class="role">Carla:</p><p>Welcome to Carpet One Stafford! How can I help you today?</p></li>
           {currentChat.map((chatMessage, index) => <li key={index}>
-            <p className="role">{(chatMessage.role === "Assistant")?'Carla':chatMessage.role}:</p>
+            <p className="role">{(chatMessage.role === "Assistant")?'Carla':'You'}:</p>
             {/* <p>{chatMessage.content}</p> */}
             
             {/* <ChatMessage message={chatMessage.content} /> */}
@@ -183,7 +183,7 @@ const App = () => {
            </li>)}
 
             
-            {isSent === 1 && (<li><p className="role">User:</p><p>{value}</p></li>)}
+            {isSent === 1 && (<li><p className="role">You:</p><p>{value}</p></li>)}
             {isSent === 1 && (<li className='assistant-wrapper'><p className="role">Carla:</p><p className='loading-wrapper'><img className="typing-image" src={typingImageUrl} /></p></li>)}
             
         </ul>
